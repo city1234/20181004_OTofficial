@@ -1,0 +1,99 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?jdwg32');
+  src:  url('fonts/icomoon.eot?jdwg32#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?jdwg32') format('truetype'),
+    url('fonts/icomoon.woff?jdwg32') format('woff'),
+    url('fonts/icomoon.svg?jdwg32#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-contact_message:before {
+  content: "\e900";
+  color: #000;
+}
+.icon-contact_name:before {
+  content: "\e901";
+}
+.icon-contact_phone:before {
+  content: "\e902";
+}
+.icon-index_02_svg01:before {
+  content: "\e903";
+  color: #000;
+}
+.icon-index_02_svg02:before {
+  content: "\e904";
+  color: #000;
+}
+.icon-index_02_svg03:before {
+  content: "\e905";
+  color: #000;
+}
+.icon-index_02_svg04:before {
+  content: "\e906";
+  color: #000;
+}
+.icon-index_02_svg05:before {
+  content: "\e907";
+  color: #000;
+}
+.icon-index_02_svg06:before {
+  content: "\e908";
+  color: #000;
+}
+.icon-information_download:before {
+  content: "\e909";
+}
+.icon-information_news:before {
+  content: "\e90a";
+}
+.icon-information_product:before {
+  content: "\e90b";
+}
+.icon-information_search:before {
+  content: "\e90c";
+}
+.icon-information_version:before {
+  content: "\e90d";
+}
+.icon-mobile_main01:before {
+  content: "\e90e";
+}
+.icon-mobile_main02:before {
+  content: "\e90f";
+}
+.icon-mobile_main03:before {
+  content: "\e910";
+}
+.icon-mobile_main04:before {
+  content: "\e911";
+}
+.icon-mobile_main05:before {
+  content: "\e912";
+}
+.icon-mobile_main06:before {
+  content: "\e913";
+}
+.icon-mobile_main07:before {
+  content: "\e914";
+}
+.icon-contact_mail:before {
+  content: "\e915";
+}

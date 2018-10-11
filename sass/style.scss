@@ -1,0 +1,710 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+//@import "compass/reset";
+@import "reset.scss";
+@import "mixin.scss";
+
+//UI definition
+//color
+$bg_main: #f4f9ff;
+$bg_sup: #edf4ff;
+$color_main: #3e8ef0;
+$color_sup: #0068d6;
+$color_add: #54a7ff;
+$colortxt_main: #323232;
+$colortxt_sup: #666666;
+$color_ignore: #9b9a9a;
+$color_alert: #f09e3e;
+$color_tip: #4a4a4a;
+$color_red: #f68622;
+$color_green: #26bd7b;
+
+//main-border-radius
+//@include css3(border-radius,$radius);
+$radius: 5px;
+
+//main-shadow
+$shadow: 0px 0px 14px #ffffff;
+@mixin shadow($shadow:$shadow){
+    @include css3(box-shadow,$shadow);
+}
+
+
+//font
+*{
+    font: normal 14px/20px "Microsoft Yahei";
+}
+@mixin bigtitle(){
+    font-size: 25px;
+    line-height: 50px;
+    font-weight: 900;
+    letter-spacing: 5px;
+}
+@mixin midtitle(){
+    font-size: 16px;
+    line-height: 25px;
+}
+@mixin txt(){
+    font-size: 14px;
+}
+@mixin txts(){
+    font-size: 12px;
+}
+
+//btn style
+@mixin btn_style_face($color ,$width ,$height ,$radius:0){
+    width: $width;
+    height: $height;
+    color: #fff;
+    background: $color;
+    line-height: $height;
+    text-align: center;
+    cursor: pointer;
+    vertical-align: middle;
+    padding: 0 5px;
+    @include txt();
+    @include css3(border-radius,$radius);
+}
+@mixin btn_style_line($color ,$width ,$height ,$radius:0){
+    width: $width;
+    height: $height;
+    border: 1px solid $color;
+    line-height: $height;
+    text-align: center;
+    cursor: pointer;
+    vertical-align: middle;
+    @include css3(transition,all .2s ease);
+    @include css3(border-radius,$radius);
+    &:hover{
+        background: $color;
+        color: #fff;
+        i{
+            color: #fff;
+        }
+    }
+}
+
+//hover active style
+@mixin hover_light(){
+    position: relative;
+    &:after{
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        content: "";
+        background: rgba(255, 255, 255,0);
+        @include css3(transition,all .2s ease);
+    }
+    &:hover{
+        //background: #59a4ff!important;
+        &:after{
+            background: rgba(255, 255, 255,.25);
+        }
+    }
+}
+
+
+//table style
+@mixin table_style(){
+    table{
+        margin: 0 auto;
+        border-collapse: separate;
+        border-spacing: 2px!important;
+        font-size: 16px;
+        line-height:1.5;
+        width: 100%;
+        tr{
+            &:first-child{
+                @include midtitle();
+                background: $color_main!important;
+                color: #fff;
+            }
+            &:nth-child(odd) {
+                background-color: rgba(190, 190, 190, 0.2);
+            }
+            span{
+                @include txts();
+                font-size: 23px;
+            }
+            td{
+                text-align: center;
+                padding: 5px;
+            }
+        }
+    }
+}
+
+//boxalign
+@mixin boxalign(){
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    -webkit-align-items: center;
+}
+
+/*
+*********useage*********
+@include POS(475px,75px);
+@include css3(transition,all 1s ease);
+@include css3(box-shadow,0px 0px 14px #ffffff);
+@include css3(border-radius,20px);
+border: 2px solid #6d4b00;
+left: calc(50% - 82.5px);
+@include linear-gradient(#db3542, #bc2741);
+@include range-width-in(0,0){}
+@include ellipsistext();
+@include linear-gradient($top, $bottom);
+
+.btn_face{
+    @include btn_style_face($color_main ,65px ,30px,$radius);
+    @include hover_light();
+}
+.btn_line{
+    @include btn_style_line($color_main ,65px ,30px,$radius);
+}
+.tablebox{
+    @include table_style();
+}
+
+
+@media screen and (min-width: 0px) and (max-width:640px) {}
+@media screen and (min-width: 641px) and (max-width:1200px) {}
+@media screen and (min-width: 1201px) and (max-width:2000px) {}
+
+*********animation*********
+@include css3(transition,all 1s ease);
+@include css3(animation,opacitylight 2s infinite linear);
+@include keyframes(opacitylight) {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+*/
+/*
+@if $point == bigpc
+    @media only screen and (max-width: 1440px)
+        @content 
+@if $point == pc
+    @media only screen and (max-width: 1024px)
+        @content 
+@else if $point == pad 
+    @media only screen and (max-width: 768px)  
+        @content 
+@else if $point == mobile 
+    @media only screen and (max-width: 425px)   
+        @content
+*/
+body{
+    background: #fff;
+    font-family: "Microsoft Yahei";
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+.stxt{
+    font-size: 14px;
+    line-height: 25px;
+}
+.stitle{
+    font-size: 18px;
+    line-height: 50px;
+    font-weight: 900;
+}
+//select style
+select{
+    @include shadow();
+    border: 0px;
+    line-height: 30px;
+    height: 30px;
+    padding: 0 7px;
+    /*很关键：将默认的select选择框样式清除*/
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    //background: #fff url("../images/select_arrow.png") no-repeat scroll right 5px center;
+    padding-right: 20px;
+    cursor: pointer;
+    min-width: 80px;
+}
+//input style
+input{
+    border: 1px solid $color_main;
+    background: rgba(0, 0, 0, 0);
+    line-height: 28px;
+    height: 28px;
+    padding: 0 10px;
+    @include css3(transition,all .2s ease);
+    width: 145px;
+}
+.visual {
+    min-height: 100vh;
+    color: #fff;
+    padding: 1em;
+    position: relative;
+    overflow: hidden;
+    @include boxalign();
+}
+.inpage_full{
+    padding: 1em 1em 8em 1em;
+}
+.wrapper{
+    width:100%;
+    height:auto;
+    margin:0 auto;
+    min-width: 1000px;
+}
+.wrapper_in{
+    max-width: 1000px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.gridbox li{
+    height: 100px;
+    @include grid( 5, 5%);
+    background: #000;
+    img{
+        width: 100%;
+    }
+}
+.pc_show{
+    @include range-width-in(0,767px){
+        display: none;
+    }
+}
+.mb_show{
+    display: none;
+    @include range-width-in(0,767px){
+        display: block;
+    }
+}
+/*navbar*/
+.navbar{
+    background-color: rgba(#040227,.7);
+    @include range-width-in(0,425px){
+        background-color: #040227;
+    }
+}
+.navbar-nav{
+    @include range-width-in(0,767px){
+        margin-top: 0px;
+    }
+}
+.navbar-default{
+    border-color: transparent;
+    .navbar-nav>li>a{
+        line-height: 45px;
+        color: #fff;
+        text-align: center;
+        padding: 10px 20px;
+        font-weight: 100;
+        @include range-width-in(0,768px){
+            line-height: 30px;
+        }
+        @include range-width-in(0,1024px){
+            padding: 10px;
+        }
+        &:hover,&:focus {
+            color: rgba(#fff,0.8);
+        }
+    }
+}
+.navbar-collapse{
+    max-height: 100%;
+}
+.navbar-brand{
+    padding: 0 8px;
+    @include range-width-in(0,768px){
+        padding: 0;
+    }
+    img{
+        height: 60px;
+        margin: 0 1.2vw;
+        @include range-width-in(0,768px){
+            height: 50px;
+        }
+    }
+}
+.navbar-toggle{
+    margin-top: 15px;
+    border: none!important;
+    &:hover{
+        background-color: rgba(0,0,0,0)!important
+    }
+    span.icon-bar{
+        position: relative;
+        @include css3(transition,.3s);
+    }
+}
+.navbar-toggle:not(.collapsed){
+    span.icon-bar{
+        &:nth-child(2){
+            top: 6px;
+            @include css3(transform,rotate(45deg));
+        }
+
+        &:nth-child(3){
+            opacity: 0;
+        }
+        &:nth-child(4){
+            top: -6px;
+            @include css3(transform,rotate(-45deg));
+        }
+    }
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{
+    background: rgba(255,255,255,.2);
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus{
+    background-color: transparent;
+    color: #fff;
+}
+.navbar-color,.custom-collapse{
+    background-color: #040227;
+    transition: background 1.2s;
+}
+    
+
+.dropdown-menu{
+    color: #040227;
+    background-color: rgba(255,255,255,1);
+    border: 1px solid rgba(#040227,.7);
+    border-top: 3px solid rgba(#040227,.7);
+    box-shadow: 0 0 5px rgba(0,0,0,.05);
+    @include range-width-in(0,768px){
+        width: 100%;
+        border: none;
+    }
+    li {
+        padding: 10px 5px;
+        @include range-width-in(0,768px){
+            background-color: rgba(255,255,255,.8);
+            color: #444;
+            width: 100%;
+        }
+    }
+}
+
+
+.dropdown:hover > .dropdown-menu{
+    background-color: rgba(255,255,255,1);
+    display: block;
+}
+.dropdown-menu>li>a{
+    text-align: center
+}
+.dropdown-menu>li>a:hover{
+    transition: all 0.5s;
+    background-color: transparent;
+    color: #ff6d00;
+}
+.navbar-nav .open .dropdown-menu{
+    position: static;
+    float: none;
+    width: auto;
+    margin-top: 0;
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+}
+
+/*scroll next*/
+a.scroll{
+    color: #fff;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    z-index: 2;
+    display: inline-block;
+    @include css3(transform, translate(-50%, -50%));
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    transition: opacity 0.3s;
+    span.arrow{
+        @include css3(transition, all 600ms cubic-bezier(0.17, 0.67, 0.83, 0.67));
+        @include css3(transform, rotate(-45deg));
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        border-left: 4px solid #fff;
+        border-bottom: 4px solid #fff;
+        border-radius: 4px;
+        margin-left: -15px;
+        box-sizing: border-box;
+        width: 30px;
+        height: 30px;
+        @include css3(animation,opacitylight 1s infinite linear);
+        @include keyframes(opacitylight) {
+            0% {
+                top: 10px;
+                opacity: 0;
+            }
+            80% {
+                opacity: 1;
+            }
+            100% {
+                top: 30px;
+                opacity: 0;
+            }
+        }
+    }
+}
+a.scroll_light{
+    color: #d4b893;
+    span.arrow{
+        border-left: 4px solid #d4b893;
+        border-bottom: 4px solid #d4b893;
+    }
+}
+h1.parttitle{
+    color:#333333;
+    font-size: 48px;
+    font-size: 5vmin;
+    letter-spacing: 10px;
+    letter-spacing: 1vmin;
+    width: 100%;
+    text-align: center;
+    font-weight: 900;
+    margin: 40px auto;
+    @include range-width-in(0,768px){
+        font-size: 30px;
+        font-size: 10vmin;
+        letter-spacing: 10px;
+        letter-spacing: 1vmin;
+    }
+}
+/*index*/
+#index_main{
+    background: url(../images/index_01.jpg) center;
+    background-size:cover; 
+    background-attachment:fixed;
+    @include boxalign();
+    position: relative;
+    overflow: hidden;
+}
+#index_why{
+    background: url(../images/index_02.jpg) center;
+    background-size:cover; 
+    background-attachment:fixed;
+    .rowbox{
+        li{
+            padding: 2%;
+            text-align: center;
+            flex-grow: 1;
+            cursor: pointer;
+            width: calc(100% / 3);
+            @include range-width-in(0,768px){
+                width: 100%;
+            }
+            &:hover{
+                .circle{
+                    @include css3(transform,rotatey(360deg));
+                    i:before{
+                        color: #525a67;
+                    }
+                }
+            }
+            .circle{
+                @include css3(border-radius,50%);
+                @include css3(transition,all .3s ease );
+                border: 3px solid #525a67;
+                padding: 1.5em;
+                display: table;
+                margin: 0 auto;
+                i{
+                    &:before{
+                        @include css3(transition,all .3s ease );
+                        font-size: 120px;
+                        color: #a9b1b7;
+                    }
+                }
+            }
+        }
+    }
+}
+#index_crate{
+    background: url(../images/index_03.jpg) center;
+    background-size:cover; 
+    background-attachment:fixed;
+    .rowbox{
+        li{
+            padding: 2%;
+            text-align: center;
+            flex-grow: 1;
+            cursor: pointer;
+            width: calc(100% / 4);
+        }
+        
+    }
+}
+.rowbox{
+    width: 100%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    li{
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center; 
+    }
+}
+.maintext{
+    margin: auto;
+    text-align: center;
+    z-index: 1;
+    &:hover{
+        &:before,&:after{
+            @include css3(transform,scale(.8) rotate(45deg));
+        }
+    }
+    &:before,&:after{
+        position: absolute;
+        content: "";
+        width: 100vmin;
+        height: 100vmin;
+        top: calc(50% - 50vmin);
+        left: calc(50% - 50vmin);
+        background: rgba(20,30,55,.4);
+        border: 4px solid #0e2f6f;
+        z-index: -1;
+        @include css3(transform,rotate(45deg));
+        //@include css3(transition, all 1s);
+    }
+    &:before{
+        left: calc(50% - 45vmin);
+        @include css3(transition, all .8s);
+    }
+    &:after{
+        left: calc(50% - 55vmin);
+        @include css3(transition, all .5s);
+    }
+    h1{
+        font-size: 65px;
+        font-size: 7vmin;
+        letter-spacing: 10px;
+        letter-spacing: 1vmin;
+        line-height: 100px;
+        line-height: 10vmin;
+        margin-bottom: 20px;
+        @include range-width-in(0,768px){
+            font-size: 40px;
+            font-size: 10vmin;
+            line-height: 55px;
+            line-height: 20vmin;
+        }
+        span{
+            font-size: 80px;
+            font-size: 8vmin;
+            font-weight: 900;
+            @include range-width-in(0,768px){
+                font-size: 55px;
+                font-size: 15vmin;
+            }
+        }
+    }
+    .stxt{
+        color:#6581b4;
+        font-weight: 900;
+    }
+}
+.lightbg{
+    .stitle{
+        color:#333;
+    }
+    .stxt{
+        color:#666;
+    }
+}
+.darkbg{
+    .stitle{
+        color:#fffffb;
+    }
+    .stxt{
+        color:#fff;
+    }
+    h1.parttitle{
+        color:#fff;
+    }
+}
+#canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/*footer*/
+footer{
+    background-color: #222;
+    padding: 20px 15px;
+    overflow: hidden;
+    text-align: center;
+    color: #979490;
+    font-size: 12px;
+    line-height: 22px;
+    z-index: 10;
+    @include range-width-in(0,1024px){
+        padding: 10px;
+    }
+}
+/*totop*/
+.toTop span{
+    position: fixed;
+    bottom: 66px;
+    right: 25px;
+    font-size: 50px;
+    line-height: 50px;
+    color: #fff;
+    text-align: center;
+    font-weight: bolder;
+    z-index: 999;
+    background-color: rgba(123, 123, 123, 1);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    @include css3(transition, all 0.5s);
+    &:hover{
+        opacity: 0.9;
+    }
+    p{
+        border-radius: 50%;
+        text-align: center;
+        width: 50px;
+        height: 50px;
+        &::before{
+            position: relative;
+            line-height: 50px;
+            top: -5px;
+        }
+    }
+    .arrow{
+        @include css3(transform, rotate(135deg));
+        position: absolute;
+        top: 18px;
+        left: 50%;
+        border-left: 4px solid #fff;
+        border-bottom: 4px solid #fff;
+        border-radius: 4px;
+        margin-left: -12px;
+        box-sizing: border-box;
+        width: 25px;
+        height: 25px;
+    }
+}
