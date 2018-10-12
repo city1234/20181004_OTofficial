@@ -499,6 +499,9 @@ h1.parttitle{
     @include boxalign();
     position: relative;
     overflow: hidden;
+    .stxt{
+        color:#6581b4;
+    }
 }
 #index_why{
     background: url(../images/index_02.jpg) center;
@@ -546,13 +549,88 @@ h1.parttitle{
     background-attachment:fixed;
     .rowbox{
         li{
+            background: url(../images/index_02_pagepic.png) top repeat;
             padding: 2%;
+            margin: 1% .25%;
             text-align: center;
             flex-grow: 1;
             cursor: pointer;
-            width: calc(100% / 4);
+            width: calc(98% / 4);
+            min-height: 55vh;
+            padding-top: 10%;
+            @include css3(transition,all .3s ease );
+            @include range-width-in(0,768px){
+                min-height: 40vh;
+                width: 100%;
+                .stitle{color:#d4b893!important;}
+                .stxt{color:#d4b893!important;margin-top: 5%!important;}
+                .circle{border: 1px solid #d4b893!important;}
+            }
+            &:nth-child(1){
+                background-position: 25%;
+            }
+            &:nth-child(2){
+                background-position: 50%;
+            }
+            &:nth-child(3){
+                background-position: 75%;
+            }
+            .circle{
+                @include css3(border-radius,50%);
+                @include css3(transition,all .3s ease );
+                @include boxalign();
+                border: 1px solid #8a8a96;
+                margin: 0 auto;
+                width: 65px;
+                height: 65px;
+                .stitle{
+                    font-size: 45px;
+                    color:#8a8a96;
+                    width: 100%;
+                }
+            }
+            .stxt{
+                margin-top: 25%;
+                font-size: 16px;
+                line-height: 30px;
+                color:#8a8a96;
+                letter-spacing: 3px;
+            }
         }
-        
+        @include range-width-in(769px){
+            li{
+                &:hover{
+                    @include css3(transform,scale(1.1)!important);
+                    .stitle{color:#d4b893!important;}
+                    .stxt{color:#d4b893;}
+                    .circle{border: 1px solid #d4b893;}
+                }
+            }
+        &:hover{
+            li{
+                @include css3(transform,scale(.9));
+            }
+        }
+        }
+    }
+}
+#index_pay{
+    background: url(../images/index_02.jpg) center;
+    background-size:cover; 
+    background-attachment:fixed;
+    .container{
+        width: 100%!important;
+    }
+    .rowbox{
+        .payimg{
+            img{
+                width: 100%;
+            }
+        }
+        >*{
+            width: 50%;
+            flex-grow: 1;
+        }
     }
 }
 .rowbox{
@@ -622,16 +700,23 @@ h1.parttitle{
         }
     }
     .stxt{
-        color:#6581b4;
         font-weight: 900;
     }
 }
 .lightbg{
+    color:#333;
     .stitle{
         color:#333;
     }
     .stxt{
         color:#666;
+    }
+    a.scroll_light{
+        color: #d4b893;
+        span.arrow{
+            border-left: 4px solid #d4b893;
+            border-bottom: 4px solid #d4b893;
+        }
     }
 }
 .darkbg{
@@ -643,6 +728,13 @@ h1.parttitle{
     }
     h1.parttitle{
         color:#fff;
+    }
+    a.scroll_light{
+        color: #fff;
+        span.arrow{
+            border-left: 4px solid #fff;
+            border-bottom: 4px solid #fff;
+        }
     }
 }
 #canvas{
