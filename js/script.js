@@ -10,10 +10,18 @@ $(function() {
 $(document).ready(function () {
     var navbar = $('.navbar');
     var navHeight = navbar.height();
-
+    var pagenum = location.pathname.replace(/\//g, "");
+    function pagelink_fn() {
+        $("ul.navbar-nav li").each(function(){
+            var a_href = $(this).find('a').attr('href');
+            if(a_href==pagenum){
+                $(this).addClass("activecolor");
+            }
+        });
+    }
     $(window).scroll(function() {
         if ($(this).scrollTop() >= navHeight) {
-            navbar.addClass('navbar-color');
+            navbar.addClass('navbar-color'), function() {};
         } else {
             navbar.removeClass('navbar-color');
         }
@@ -22,7 +30,9 @@ $(document).ready(function () {
     if (agent.match("android") || agent.match("iphone") || agent.match("ipad")) { } else {
         nice = $("html").niceScroll({ scrollspeed: 51, mousescrollstep: 45, cursorwidth: "5px", cursorcolor: "#222", cursorborder: "0px solid #fff" });
     };
-    $('.navbar').load('common.html .container');
+    $('.navbar').load('common.html .container', function() {
+        pagelink_fn();
+    });
     $('footer').load('common.html footer');
     //$('#alertbox .alertcontent').load('common.html .alertcontent');
 });

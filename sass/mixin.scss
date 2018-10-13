@@ -2,6 +2,11 @@
     width: $w ;
     height: $h ;
 }
+@mixin position($t,$l:$t){
+    top: $t;
+    left: $l;
+}
+    
 /*zindex*/
 
 @mixin zindex() {
@@ -76,6 +81,30 @@ white-space : nowrap;
         }
     }
 }
+@mixin breakpoint($point){
+    @if $point == bigpc {
+        @media only screen and (max-width: 1440px) {
+            @content;
+        }
+    }
+    @else if $point == pc {
+        @media only screen and (max-width: 1024px){
+            @content;
+        }
+    }
+    @else if $point == pad {
+        @media only screen and (max-width: 768px)  {
+            @content;
+        }
+    }
+    @else if $point == mobile {
+        @media only screen and (max-width: 425px)  {
+            @content;
+        }
+    }
+}
+
+
 
 @mixin range-width-in( $min: 0, $max: 0){
     @if $max == 0{
