@@ -12,12 +12,16 @@ $(document).ready(function () {
     var navHeight = navbar.height();
     var pagenum = location.pathname.replace(/\//g, "");
     function pagelink_fn() {
-        $("ul.navbar-nav li").each(function(){
-            var a_href = $(this).find('a').attr('href');
-            if(a_href==pagenum){
-                $(this).addClass("activecolor");
-            }
-        });
+        if (pagenum==""){
+            $("ul.navbar-nav li").eq(0).addClass("activecolor");
+        }else{
+            $("ul.navbar-nav li").each(function(){
+                var a_href = $(this).find('a').attr('href');
+                if(a_href==pagenum){
+                    $(this).addClass("activecolor");
+                }
+            });
+        }
     }
     $(window).scroll(function() {
         if ($(this).scrollTop() >= navHeight) {

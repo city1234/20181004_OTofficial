@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107870706-2"></script>
+    <script src="js/ga.js"></script>
+    <!--gaend-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>关于我们</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/colorbox.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<style>
+
+</style>
+
+<body>
+    <div>
+        <div class="navbar anvbar-custom navbar-default navbar-fixed-top" role="navigation"></div>
+        <section id="about">
+            <div class="inpagetitlebanner abouttitlebanner">
+                <div class="wow fadeInRight titlebannertxt">传奇软件 值得信赖</div>
+            </div>
+            <section>
+                <div class="titlebox">
+                    <h1 class="title parttitle">品牌理念
+                        <div class="stitle">Brand Concept</div>
+                    </h1>
+                </div>
+                <div class="rowbox">
+                    <div class="img aboutpic_01">
+                        <img src="images/about_01.jpg" alt="">
+                    </div>
+                    <article>
+                        <div class="txtbox">
+                            <div class="title">上善若水 厚德载物</div>
+                            <div class="txt">
+                                传奇软件一直为博彩行业健康有序发展而不断努力，<br/>
+                                为我们的客户提供专业网站管理，<br/>
+                                便捷易操作的后台系统，以及全新的代理模式，<br/>
+                                为我们的玩家提供丰富多元化的游戏平台，<br/>
+                                保证游戏平台的公平公正，<br/>
+                                所有的努力只为为您提供更多优质服务。<br/><br/>
+
+                                行业领先的软硬件技术使我们收到客户及玩家的信任，<br/>
+                                我们将一如既往重视客户的反馈及需求，坚持不断创新，<br/>
+                                实现客户所想、玩家所需，朝多元化娱乐服务平台发展
+                            </div>
+                            <div class="txtline"></div> 
+                        </div>
+                        
+                    </article>
+                </div>
+                <div class="rowbox">
+                    <article>
+                        <div class="txtbox lefttxtbox">
+                            <div class="title">专业的团队</div>
+                            <div class="txt">
+                                传奇软件一直致力于打造一支专业的团队，从而为我们的客户提供更多优质的服务，打造专属您的游戏平台
+                                <ul class="list">
+                                    <li>公司现有一支专业的团队，从产品到开发再到测试，每一个环节都严格把关，只为打磨一款更具包容性的游戏服务平台；</li>
+                                    <li>7*24小时的运维服务，实时为您解决您的问题；</li>
+                                    <li>专业的运营团队，为您的网站运营保驾护航；</li>
+                                </ul>
+                            </div>
+                            <div class="txtline"></div>
+                        </div>
+                        
+                    </article>
+                    <div class="img">
+                        <img src="images/about_02.jpg" alt="">
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="titlebox">
+                    <h1 class="title parttitle">企业愿景
+                        <div class="stitle">Corporate Vision </div>
+                    </h1>
+                </div>
+                <div class="rowbox">
+                    <div class="title">
+                        引领博彩行业的健康稳定发展<br/>打造全球最大的一站式游戏服务平台
+                    </div>
+                </div>
+            </section>
+
+        </section>
+        <footer>
+        </footer>
+        <a href="# " class="toTop " href="# " title="top ">
+            <span>
+                <p class="arrow">
+                </p>
+            </span>
+        </a>
+    </div>
+</body>
+<script src="js/jquery-2.1.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.nicescroll.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/jquery.colorbox.js"></script>
+<script src="js/vue.js "></script>
+<script src="js/data.js "></script>
+<script src="js/slick.js "></script>
+<script src="js/script.js"></script>
+<script>
+    var newsBanner;
+    var Newsmodal = false;
+
+    function ShowLightBox(light_box, boxModal) {
+        document.getElementById(light_box).style.display = 'block';
+        document.getElementById('fade').style.display = 'block';
+        newsBanner = light_box;
+        if (boxModal)
+            Newsmodal = true;
+        else Newsmodal = false;
+
+    }
+
+    function HideLightBox() {
+        if (document.getElementById(newsBanner)) {
+            document.getElementById(newsBanner).style.display = 'none';
+            document.getElementById('fade').style.display = 'none';
+            newsBanner = '';
+        }
+    }
+    /*$(function(){
+    	if(!getCookies("cancelAlert2")){
+    	 initoutalertbox_fn0();
+    	 addCookie("cancelAlert2","1",1);
+       }
+    })*/
+    
+    $(".searchbtn_mb,.prepage").click(function () {
+            $(".searchbox_mb").toggleClass("searchactive");
+        });
+    $(".alertinfbox").click(function () {
+        setTimeout('initoutalertbox_fn0()', 50) ;
+    	;
+    });
+    $(".alertinfbox1").click(function () {
+        setTimeout('initoutalertbox_fn1()', 50);
+    });
+    
+    function initoutalertbox_fn0(){
+        var alertboxw = $(window).width();
+        if (alertboxw > 1200) { alertboxw = 1200; }
+        var $form = $("#alertbox");
+        $.colorbox({
+            //iframe: true,
+            inline: true,
+            href: $form,
+            width: alertboxw, //燈箱中間區塊的寬度
+            fixed: true
+        });
+    }
+    function initoutalertbox_fn1() {
+        var alertboxw = $(window).width();
+        if (alertboxw > 1200) { alertboxw = 1200; }
+        var $form = $("#alertbox1");
+        $.colorbox({
+            //iframe: true,
+            inline: true,
+            href: $form,
+            width: alertboxw, //燈箱中間區塊的寬度
+            fixed: true
+        });
+    }
+</script>
+
+</html>

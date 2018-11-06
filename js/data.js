@@ -37,7 +37,7 @@ var vm = new Vue({
                 istopbanner: true, //是否首页展示
                 clickto: false, //是否有内页跳窗公告
                 link: "action/20180929_openwarad/index.html", //点击连结,下载檔案
-                downloadbtn: false, //是否有下载按钮
+                downloadbtn: true, //是否有下载按钮
                 downloadlink: "", //下载连结
                 mainbannerimg: "images/activebanner/20180929_openwarad.jpg", //首页大图2500*1080
                 bannerimg: "images/activebanner/20180929_openwarad_s.jpg", //公告内页小图1410*385
@@ -273,7 +273,7 @@ var vm = new Vue({
             // },
             {
                 newstype: 1,
-                importanttag: false,
+                importanttag: true,
                 istopbanner: false,
                 clickto: true,
                 link: "javascript: void(0)",
@@ -732,7 +732,7 @@ var vm = new Vue({
             this.nowlistpage = index;
             this.search = "";
             $(".newsnavlist>div>li").eq(index).addClass("active").siblings().removeClass("active");
-            $("#newsPage01 .newsnavlist>div>li").eq(index).addClass("active").siblings().removeClass("active");
+            $("#information .newsnavlist>div>li").eq(index).addClass("active").siblings().removeClass("active");
             $("html").getNiceScroll().resize();
             $("html").getNiceScroll().remove();
             var agent = navigator.userAgent.toLowerCase();

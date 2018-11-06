@@ -24,93 +24,49 @@
 
 <body>
     <div id="newsPageout" v-cloak>
-        <div class="fadeIn navbar navbar-custom navbar-default navbar-fixed-top" role="navigation" data-wow-delay="0.2s">
-            <div class="container">
-                <div class="navbar-header">
-                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.html">
-                        <img src="images/icon/logo.png" alt="">
-                    </a>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="index.html">首页</a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="product.html" class="dropdown-toggle">产品中心 <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="lottery.html">彩票游戏</a></li>
-                                <li><a href="sport.html">体育投注</a></li>
-                                <li><a href="electronic.html">电子游艺</a></li>
-                                <li><a href="video.html">真人视讯</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="case.html">客户案例</a>
-                        </li>
-                        <li>
-                            <a href="news.html">最新快讯</a>
-                        </li>
-                        <li>
-                            <a href="culture.html">企业文化</a>
-                        </li>
-                        <li>
-                            <a href="http://df123456789.com" target="_blank">试玩体验</a>
-                        </li>
-                        <li>
-                            <a href="mobile.html">手机投注</a>
-                        </li>
-                        <li>
-                            <a href="cooperation.html">开放合作</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="newsnavlist mb">
+        <div class="navbar anvbar-custom navbar-default navbar-fixed-top" role="navigation"></div>
+        <div class="newsnavlist mb_show wow fadeInDown"  data-wow-delay="0.3s">
             <div class="newsnavlistul">
-                <li class="active" @click="newsnavlist(0)">产品<span>专栏</span></li>
-                <li @click="newsnavlist(1)">内容<span>发布</span></li>
-                <li @click="newsnavlist(2)">活动<span>专栏</span></li>
+                    <li class="active" @click="newsnavlist(0)"><span><i class="icon-information_product"></i></span>产品<span>资讯</span></li>
+                    <li @click="newsnavlist(1)"><span><i class="icon-information_version"></i></span>发版<span>内容</span></li>
+                    <li @click="newsnavlist(2)"><span><i class="icon-information_news"></i></span>最新<span>活动</span></li>
                 <!--<li @click="newsnavlist(3)">下载<span>通道</span></li>-->
                 <li class="searchbtn_mb"><img src="images/search_icon.png"></li>
             </div>
             <div class="searchbox_mb searchactive">
-                <div class="prepage"><i class="icon-arrow-right"></i></div>
+                <div class="prepage"><i class="icon-chevron-right"></i></div>
                 <div class="newssearchbar">
                     <div class="possearchpic">
                         <img src="images/search_icon.png">
                     </div>
-                    <div class="form-group">
-                        <input type="search" class="form-control" id="search" placeholder="请输入关键字" v-model="search">
-                    </div>
+                    <input type="search" class="form-control" id="search" placeholder="请输入关键字" v-model="search">
                 </div>
             </div>
         </div>
-        <section class="wow fadeInDown" id="newsPage01">
-            <div class="container">
+        <section id="information">
+            <div class="inpagetitlebanner informationtitlebanner">
+                <div class="titlebannertxt wow fadeInLeft"><img class="titlebg pc_show" src="images/information_title.png"> <div class="wow fadeInRight" data-wow-delay="0.4s">平台资讯实时了解</div></div>
+            </div>
+            <div class="container wow fadeInDown">
                 <div class="row">
-                    <div class="col-md-12 newsBigBanner" data-wow-delay="0.2s">
+                    <div class="col-md-12 newsBigBanner">
                         <div class="newstitle">
-                            <div class="title">最新快讯</div>
+                            <div class="title">
+                                平台资讯
+                                <div class="stxt">Product Information</div>
+                            </div>
                             <div class="rightlist">
                                 <div class="newsnavlist">
                                     <div class="newsnavlistul">
-                                        <li class="active" @click="newsnavlist(0)">产品<span>专栏</span></li>
-                                        <li @click="newsnavlist(1)">内容<span>发布</span></li>
-                                        <li @click="newsnavlist(2)">活动<span>专栏</span></li>
+                                        <li class="active" @click="newsnavlist(0)"><i class="icon-information_product"></i>产品<span>资讯</span></li>
+                                        <li @click="newsnavlist(1)"><i class="icon-information_version"></i>发版<span>内容</span></li>
+                                        <li @click="newsnavlist(2)"><i class="icon-information_news"></i>最新<span>活动</span></li>
                                         <!--<li @click="newsnavlist(3)">下载<span>通道</span></li>-->
                                     </div>
                                 </div>
                                 <div class="newssearchbar">
                                     <div class="possearchpic"><img src="images/search_icon.png"></div>
-                                    <div class="form-group">
+                                    <div>
                                         <input type="search" class="form-control" id="search" placeholder="请输入关键字" v-model="search">
                                     </div>
                                 </div>
@@ -121,21 +77,21 @@
                         <div id="alerthind">
                             <div id="alertbox" class="newsalert">
                                 <div class="alertcontent" v-for="(news,index) in newss" v-if="intopagevif(index)">
+                                    <div class="newsconttitlebox">
+                                        <div class="title"  :class="{title_active:news.importanttag}">{{news.name}}</div>
+                                    </div>
                                     <img class="alertbannerimg" :src="news.bannerimg">
-                                    <div class="title">{{news.name}}</div>
                                     <div class="titleline"></div>
                                     <div class="time">{{news.time}}</div>
-                                    <div class="txt" v-html="news.containtext">
-                                    </div>
+                                    <div class="txt" v-html="news.containtext"> </div>
                                 </div>
                             </div>
                             <div id="alertbox1" class="newsalert">
                                 <div class="alertcontent" v-for="(news,index) in newss" v-if="intopagevif(index)">
                                     <div class="newsconttitlebox">
-                                        <div class="title"  :class="{title_active:news.importanttag}">{{news.name}}</div>
-                                        <!--<div class="time">{{news.time}}</div>-->
+                                        <div class="newtag"  :class="{title_active:news.importanttag}">{{news.name}}</div>
+                                        <div class="title">{{news.containtexts}}</div>
                                     </div>
-                                    <div class="txtmain">{{news.containtexts}}</div>
                                     <div class="txt" v-html="news.containtext">
                                     </div>
                                 </div>
@@ -143,7 +99,7 @@
                         </div>
                         <!--productpage-->
                         <div id="news_productpage" v-show="nowlistpage==0">
-                            <div class="newsBanner">
+                            <div class="newsBanner topnewsBanner">
                                 <div class="row">
                                     <div id="innewsBanner" v-for="(news,index) in newss" v-show="news.importanttag&news.newstype==nowlistpage">
                                         <!-- <div id="lightboxspan" onclick="ShowLightBox('Newsbox'); return false;"> -->
@@ -154,11 +110,17 @@
                                                         <img class="img-responsive" src="images/newsBanner.png" alt="">
                                                     </div>
                                                     <div class="newsText">
-                                                        <div class="row">
-                                                            <div class="title"><p>{{news.name}}</p></div>
-                                                            <div class="date">{{news.time}}</div>
+                                                        <div class="flexbox">
+                                                            <div>
+                                                                <div class="title"><p>{{news.name}}</p></div>
+                                                                <div class="date">{{news.time}}</div>
+                                                            </div>
+                                                            <a :href="news.downloadlink" target="_blank" v-if="news.downloadbtn" class="downloadlink">
+                                                                <div class="download">
+                                                                    <i class="icon-information_download"></i>
+                                                                </div>
+                                                            </a>
                                                         </div>
-                                                        <a :href="news.downloadlink" target="_blank" v-if="news.downloadbtn" class="downloadlink"><div class="download"><i class="icon-download"></i><div class="downloadtxt">素材下载</div></div></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -176,18 +138,17 @@
                                                         <img class="img-responsive" src="images/newsBanner.png" alt="">
                                                     </div>
                                                     <div class="newsText">
-                                                        <div class="row">
-                                                            <div class="title">
-                                                                <p>{{news.name}}</p>
+                                                        <div class="flexbox">
+                                                            <div>
+                                                                <div class="title"><p>{{news.name}}</p></div>
+                                                                <div class="date">{{news.time}}</div>
                                                             </div>
-                                                            <div class="date">{{news.time}}</div>
+                                                            <a :href="news.downloadlink" target="_blank" v-if="news.downloadbtn" class="downloadlink">
+                                                                <div class="download">
+                                                                    <i class="icon-information_download"></i>
+                                                                </div>
+                                                            </a>
                                                         </div>
-                                                        <a :href="news.downloadlink" target="_blank" v-if="news.downloadbtn" class="downloadlink">
-                                                            <div class="download">
-                                                                <i class="icon-download"></i>
-                                                                <div class="downloadtxt">素材下载</div>
-                                                            </div>
-                                                        </a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -211,22 +172,20 @@
                         <!--contentpage-->
                         <div id="news_contentpage" v-show="nowlistpage==1">
                             <div class="newsBanner">
-                                <div class="row">
-                                    <div class="contentpage_contentlist_out" v-for="(news,index) in newss"  v-show="news.newstype==nowlistpage&news.containtexts.indexOf(search)!=-1">
-                                        <a @click="clickindex(index)" :href="news.link" :target="clicktoopen(index)" :class="{alertinfbox1:news.clickto}">
-                                            <div class="fadeInDown contentpage_contentlist_in" data-wow-delay="0.4s">
-                                                <div class="contentpage_text">
-                                                    <div class="newsText">
-                                                        <div class="title" :class="{title_active:news.importanttag}">
-                                                            <p>{{news.name}}</p>
-                                                        </div>
-                                                        <div class="newscontent"><p>{{news.containtexts}}</p></div>
-                                                        <div class="date">{{news.time}}</div>
+                                <div class="contentpage_contentlist_out" v-for="(news,index) in newss"  v-show="news.newstype==nowlistpage&news.containtexts.indexOf(search)!=-1">
+                                    <a @click="clickindex(index)" :href="news.link" :target="clicktoopen(index)" :class="{alertinfbox1:news.clickto}">
+                                        <div class="fadeInDown contentpage_contentlist_in" data-wow-delay="0.4s">
+                                            <div class="contentpage_text">
+                                                <div class="newsText">
+                                                    <div class="title" :class="{title_active:news.importanttag}">
+                                                        <p>{{news.name}}</p>
                                                     </div>
+                                                    <div class="newscontent"><p>{{news.containtexts}}</p></div>
+                                                    <div class="date">{{news.time}}</div>
                                                 </div>
                                             </div>
-                                        </a>
-                                    </div>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                             <div class="pagectrlbox">
@@ -244,7 +203,7 @@
                         <!--contentpage_end-->
                         <!--eventpage-->
                         <div id="news_eventpage"  v-show="nowlistpage==2">
-                            <div class="newsBanner">
+                            <div class="newsBanner topnewsBanner">
                                 <div class="row">
                                     <div id="innewsBanner" v-for="(news,index) in newss" v-show="news.importanttag&news.newstype==nowlistpage">
                                         <!-- <div id="lightboxspan" onclick="ShowLightBox('Newsbox'); return false;"> -->
@@ -255,18 +214,17 @@
                                                         <img class="img-responsive" src="images/newsBanner.png" alt="">
                                                     </div>
                                                     <div class="newsText">
-                                                        <div class="row">
-                                                            <div class="title">
-                                                                <p>{{news.name}}</p>
+                                                        <div class="flexbox">
+                                                            <div>
+                                                                <div class="title"><p>{{news.name}}</p></div>
+                                                                <div class="date">{{news.time}}</div>
                                                             </div>
-                                                            <div class="date">{{news.time}}</div>
+                                                            <a :href="news.downloadlink" target="_blank" v-if="news.downloadbtn" class="downloadlink">
+                                                                <div class="download">
+                                                                    <i class="icon-information_download"></i>
+                                                                </div>
+                                                            </a>
                                                         </div>
-                                                        <a :href="news.downloadlink" target="_blank" v-if="news.downloadbtn" class="downloadlink">
-                                                            <div class="download">
-                                                                <i class="icon-download"></i>
-                                                                <div class="downloadtxt">素材下载</div>
-                                                            </div>
-                                                        </a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -284,19 +242,18 @@
                                                         <img class="img-responsive" src="images/newsBanner.png" alt="">
                                                     </div>
                                                     <div class="newsText">
-                                                        <div class="row">
-                                                            <div class="title">
-                                                                <p>{{news.name}}</p>
+                                                            <div class="flexbox">
+                                                                <div>
+                                                                    <div class="title"><p>{{news.name}}</p></div>
+                                                                    <div class="date">{{news.time}}</div>
+                                                                </div>
+                                                                <a :href="news.downloadlink" target="_blank" v-if="news.downloadbtn" class="downloadlink">
+                                                                    <div class="download">
+                                                                        <i class="icon-information_download"></i>
+                                                                    </div>
+                                                                </a>
                                                             </div>
-                                                            <div class="date">{{news.time}}</div>
                                                         </div>
-                                                        <a :href="news.downloadlink" target="_blank" v-if="news.downloadbtn" class="downloadlink">
-                                                            <div class="download">
-                                                                <i class="icon-download"></i>
-                                                                <div class="downloadtxt">素材下载</div>
-                                                            </div>
-                                                        </a>
-                                                    </div>
                                                 </div>
                                             </div>
                                         </a>
@@ -354,35 +311,15 @@
                             </div>
                         </div>
                         <!--downloadpage_end-->
-
-
-
-
                     </div>
                 </div>
             </div>
         </section>
         <footer>
-            <div class="row">
-                <div class="col-lg-6">
-                    <p>© ORIENTALPLATFORM.ALL RIGHT RESERVED.<span>版权所有 东方平台</span></p>
-                </div>
-                <div class="col-lg-6 text-right">
-                    <div class="QQ">
-                        <span class="icon-qq-icon"> </span>
-                        <span class="icon-qq-num" 
-                            onclick="window.open('http://wpa.qq.com/msgrd?v=3&uin=2158999999&site=qq&menu=yes','_blank')">2158999999</span>
-                    </div>
-                    <div class="email">
-                        <span class="icon-mail"> </span>
-                        <p>Bwtgame88@gmail.com&nbsp;&nbsp;&nbsp;<span>opgame88@gmail.com</span></p>
-                    </div>
-                </div>
-            </div>
         </footer>
         <a href="# " class="toTop " href="# " title="top ">
             <span>
-                <p class="icon-keyboard_arrow_up">
+                <p class="arrow">
                 </p>
             </span>
         </a>
@@ -460,30 +397,6 @@
             fixed: true
         });
     }
-    $('.slicknews').slick({
-            infinite: true,
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            arrows: true,
-            dots: true,
-            responsive: [{
-                breakpoint: 768,
-                settings: {
-                    centerMode: true,
-                    centerPadding: '5px',
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                }
-            }, {
-                breakpoint: 480,
-                settings: {
-                    centerMode: true,
-                    centerPadding: '5px',
-                    slidesToShow: 1,
-                    lidesToScroll: 1,
-                }
-            }]
-    });
 </script>
 
 </html>

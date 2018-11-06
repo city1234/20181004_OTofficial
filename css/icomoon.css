@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?jdwg32');
-  src:  url('fonts/icomoon.eot?jdwg32#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?jdwg32') format('truetype'),
-    url('fonts/icomoon.woff?jdwg32') format('woff'),
-    url('fonts/icomoon.svg?jdwg32#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?yfijqb');
+  src:  url('fonts/icomoon.eot?yfijqb#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?yfijqb') format('truetype'),
+    url('fonts/icomoon.woff?yfijqb') format('woff'),
+    url('fonts/icomoon.svg?yfijqb#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -96,4 +96,7 @@
 }
 .icon-contact_mail:before {
   content: "\e915";
+}
+.icon-chevron-right:before {
+  content: "\e916";
 }

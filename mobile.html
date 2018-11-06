@@ -14,157 +14,171 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="slick/slick-theme.css">
 </head>
 
 <body>
-    <div class="wow fadeIn navbar navbar-custom navbar-default navbar-fixed-top" role="navigation" data-wow-delay="0.2s">
-        <div class="container">
-            <div class="navbar-header">
-                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">
-                    <img src="images/icon/logo.png" alt="">
-                </a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="index.html">首页</a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="product.html" class="dropdown-toggle">产品中心 <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="lottery.html">彩票游戏</a></li>
-                            <li><a href="sport.html">体育投注</a></li>
-                            <li><a href="electronic.html">电子游艺</a></li>
-                            <li><a href="video.html">真人视讯</a></li>
+    <div class="navbar anvbar-custom navbar-default navbar-fixed-top" role="navigation"></div>
+    <div id="mobile">
+        <div class="lightbg inpage_full" id="mobile_enjoy">
+            <div class="container">
+                <div class="rowbox">
+                    <div class="mobimg wow fadeInUp pc_show"><img src="images/mobile_iphone.png" alt=""></div>
+                    <div class="content">
+                        <div class="title wow fadeInLeft">
+                            <img src="images/mobile_title.png" alt="">
+                            <div class="stitle">只为了给您带来更好的游戏体验</div>
+                        </div>
+                        <ul class="mainlist wow fadeInDown" data-wow-delay="0.3s">
+                            <li class="rowbox">
+                                <div class="img"><img src="images/mobile_h5.png" alt=""></div>
+                                <div class="stitle">移动网页H5</div>
+                            </li>
+                            <li class="rowbox">
+                                <div class="img"><img src="images/mobile_app.png" alt=""></div>
+                                <div class="stitle">移动端APP Android+IOS <div class="flag">即将上线</div>
+                                </div>
+                            </li>
                         </ul>
-                    </li>
-                    <li>
-                        <a href="case.html">客户案例</a>
-                    </li>
-                    <li>
-                        <a href="news.html">最新快讯</a>
-                    </li>
-                    <li>
-                        <a href="culture.html">企业文化</a>
-                    </li>
-                    <li>
-                        <a href="http://df123456789.com" target="_blank">试玩体验</a>
-                    </li>
-                    <li>
-                        <a href="mobile.html">手机投注</a>
-                    </li>
-                    <li>
-                        <a href="cooperation.html">开放合作</a>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
+            <div class="bgline pc_show"></div>
         </div>
-    </div>
-    <section class="wow fadeInDown visual" id="mobileVisual">
-        <h1 class="wow fadeInDown" data-wow-delay="0.2s">Super powerful</h1>
-        <h1 class="wow fadeInDown" data-wow-delay="0.4s">mobile phone usersion</h1>
-        <p class="wow fadeInUp" data-wow-delay="0.6s">超级强大的手机版本</p>
-        <a class="scroll" href="#mobilePage01">Scroll
-            <span class="arrow"></span>
-        </a>
-    </section>
-    <section class="wow fadeInDown" id="mobilePage01">
-        <div class="container">
-            <div class="row">
-                <h3 class="wow fadeInDown" data-wow-delay="0.2s">东方平台手机版</h3>
-                <div class="col-sm-6 col-xs-12 mobileBox">
-                    <div class="subTitle wow fadeInUp" data-wow-delay="0.4s">
-                        <span>移动网页版 H5</span>
-                    </div>
-                    <div class="col-sm-6 col-xs-12 mobileItem wow fadeInUp" data-wow-delay="0.6s">
-                        <img src="images/icon/mobileIcon01.png" alt="">
-                        <p>无需下载：
-                            <br>输入网址即可游戏支持
-                            <br>微信，第三方登录</p>
-                    </div>
-                    <div class="col-sm-6 col-xs-12 mobileItem wow fadeInUp" data-wow-delay="0.6s">
-                        <img src="images/icon/mobileIcon02.png" alt="">
-                        <p>分享功能：
-                            <br>支持分享给圈内好友</p>
-                    </div>
-                    <div class="col-sm-12">
-                        <div class="row">
-                            <div class="col-sm-6 col-xs-12 mobileItem wow fadeInUp" data-wow-delay="0.8s">
-                                <img src="images/icon/mobileIcon03.png" alt="">
-                                <p>首页运营：
-                                    <br>支持首页推广某款彩票</p>
+        <div class="lightbg inpage_full" id="mobile_adv">
+            <div class="container">
+                <div class="title wow fadeInUp img">
+                    <img src="images/mobile_title_2.png" alt="">
+                </div>
+                <div id="carousel3d" class="runbanner pc_show">
+                    <carousel-3d :height="450" :perspective="0" :space="200" :display="7" :controls-visible="true" :controls-prev-html="'&#10092;'" :controls-next-html="'&#10093;'" :controls-width="30" :controls-height="60" :clickable="true" :autoplay="true" :autoplay-timeout="5000">
+                        <slide :index="3" class="advcard">
+                            <div><i class="icon-mobile_main01"></i>
+                            <div class="stitle">支持多个游戏平台，市面上火爆的视讯游戏一应俱全</div></div>
+                        </slide>
+                        <slide :index="2" class="advcard">
+                            <div>
+                                <i class="icon-mobile_main02"></i>
+                                <div class="stitle">全平台支持，无论是iPhone或Android或者iPad都能完美兼容，追求极致。</div>
                             </div>
-                            <div class="col-sm-6 col-xs-12 mobileItem wow fadeInUp" data-wow-delay="0.8s">
-                                <img src="images/icon/mobileIcon04.png" alt="">
-                                <p>快速存取：
-                                    <br>强大的第三方支付
-                                    <br>支持快速到账</p>
+                        </slide>
+                        <slide :index="1" class="advcard">
+                            <div>
+                                <i class="icon-mobile_main03"></i>
+                                <div class="stitle">支持支付宝、微信、银行卡，安全快速便捷的支付方式</div>
                             </div>
+                        </slide>
+                        <slide :index="0" class="advcard">
+                            <div>
+                                <i class="icon-mobile_main04"></i>
+                                <div class="stitle">无需安装下载，使用更加方便快捷，可随时随地体验游戏带来的乐趣。</div>
+                            </div>
+                        </slide>
+                        <slide :index="6" class="advcard">
+                            <div><i class="icon-mobile_main05"></i>
+                            <div class="stitle">自定义首页运营，支持首页推广。</div></div>
+                        </slide>
+                        <slide :index="5" class="advcard">
+                            <div><i class="icon-mobile_main06"></i>
+                            <div class="stitle">额度免转钱包，玩家可进入 任何游戏平台进行欢享</div></div>
+                        </slide>
+                        <slide :index="4" class="advcard">
+                            <div><i class="icon-mobile_main07"></i>
+                            <div class="stitle">完善的客服系统，实时与客服进行交流，为您解决您的问题</div></div>
+                        </slide>
+                    </carousel-3d>
+                </div>
+                <div class="runbanner mb_show">
+                    <ul>
+                    <li class="advcard">
+                        <div><i class="icon-mobile_main05"></i>
+                        <div class="stitle">自定义首页运营，支持首页推广。</div></div>
+                    </li>
+                    <li class="advcard">
+                            <div><i class="icon-mobile_main06"></i>
+                        <div class="stitle">额度免转钱包，玩家可进入 任何游戏平台进行欢享</div></div>
+                        
+                            </li>
+                    <li class="advcard">
+                            <div><i class="icon-mobile_main07"></i>
+                        <div class="stitle">完善的客服系统，实时与客服进行交流，为您解决您的问题</div></div>
+                        
+                            </li>
+                    <li class="advcard">
+                            <div><i class="icon-mobile_main01"></i>
+                        <div class="stitle">支持多个游戏平台，市面上火爆的视讯游戏一应俱全</div></div>
+                        
+                            </li>
+                    <li class="advcard">
+                        <div>
+                            <i class="icon-mobile_main02"></i>
+                            <div class="stitle">全平台支持，无论是iPhone或Android或者iPad都能完美兼容，追求极致。</div>
+                        </div>
+                    </li>
+                    <li class="advcard">
+                        <div>
+                            <i class="icon-mobile_main03"></i>
+                            <div class="stitle">支持支付宝、微信、银行卡，安全快速便捷的支付方式</div>
+                        </div>
+                    </li>
+                    <li class="advcard">
+                        <div>
+                            <i class="icon-mobile_main04"></i>
+                            <div class="stitle">无需安装下载，使用更加方便快捷，可随时随地体验游戏带来的乐趣。</div>
+                        </div>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bgline pc_show"></div>
+        </div>
+        <div class="visual darkbg inpage_full" id="mobile_backend">
+            <div class="container">
+                <div class="rowbox">
+                    <div>
+                        <div class="title wow fadeInUp">
+                            <img src="images/mobile_title_3.png" alt="">
+                            <div class="flag">即将火热来袭</div>
+                        </div>
+                        <ul class="list">
+                            <li class="wow fadeInUp rowbox" data-wow-delay="0.1s">
+                                <div class="iconimg"><img src="images/mobile_backend_01.png" alt=""></div>
+                                <div class="stxt">代理可随时随地查看创收，了解自己的实时数据。</div>
+                            </li>
+                            <li class="wow fadeInUp rowbox" data-wow-delay="0.2s">
+                                <div class="iconimg"><img src="images/mobile_backend_02.png" alt=""></div>
+                                <div class="stxt">随时随地进行下级代理或直属玩家的添加，帮助代理更快速的提高管理效率，推动平台的创收。</div>
+                            </li>
+                            <li class="wow fadeInUp rowbox" data-wow-delay="0.3s">
+                                <div class="iconimg pc"><img src="images/mobile_backend_03.png" alt=""></div>
+                                <div class="stxt">更方便，更快捷，更便利的移动办公，摆脱时间和空间的束缚。</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="rwdimg">
+                        <div class="macimg wow fadeInUp img" data-wow-delay="0.4s">
+                            <img src="images/mobile_rwd_mac.png" alt="">
+                        </div>
+                        <div class="padimg wow fadeInDown img" data-wow-delay="0.2s">
+                            <img src="images/mobile_rwd_pad.png" alt="">
+                        </div>
+                        <div class="lineimg lineimgone wow fadeInDown img" data-wow-delay="0.3s">
+                            <img src="images/mobile_rwd_line.png" alt="">
+                        </div>
+                        <div class="lineimg lineimgtwo wow fadeInDown img" data-wow-delay="0.3s">
+                            <img src="images/mobile_rwd_line.png" alt="">
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-xs-12 mobileBox">
-                    <div class="subTitle wow fadeInUp" data-wow-delay="0.4s">
-                        <span>移动端 APP Android+iOS</span>
-                    </div>
-                    <div class="col-sm-12 mobileBigItem wow fadeInUp" data-wow-delay="0.6s">
-                        <img src="images/icon/mobileIcon05.png" alt="">
-                        <p>支持IOS安卓更新
-                            <br>下载一次永久保存</p>
-                    </div>
-                    <div class="col-sm-6 col-xs-12 mobileItem wow fadeInUp" data-wow-delay="0.8s">
-                        <img src="images/icon/mobileIcon06.png" alt="">
-                        <p>搭配免额度转换技术玩
-                            <br>家在各大游戏平台内游戏
-                            <br>额度无需转来转去</p>
-                    </div>
-                    <div class="col-sm-6 col-xs-12 mobileItem wow fadeInUp" data-wow-delay="0.8s">
-                        <img src="images/icon/mobileIcon07.png" alt="">
-                        <p>有效防攻击使玩家获得
-                            <br>最佳的体验效果为您的
-                            <br>网站保驾护航</p>
-                    </div>
-                </div>
             </div>
-        </div>
-        <a class="scroll" href="#mobilePage02">Scroll
-            <span class="arrow"></span>
-        </a>
-    </section>
-    <div class="wow fadeInDown" id="mobilePage02">
-        <div class="container">
-            <h2 class="wow fadeInDown" data-wow-delay="0.2s">东方平台手机版APP</h2>
-            <h2 class="wow fadeInDown" data-wow-delay="0.4s">具权威的投注客户端</h2>
-            <p class="wow fadeInUp" data-wow-delay="0.6s">即将来袭</p>
         </div>
     </div>
-    <footer>
-        <div class="row">
-            <div class="col-lg-6">
-                <p>© ORIENTALPLATFORM.ALL RIGHT RESERVED.<span>版权所有 东方平台</span></p>
-            </div>
-            <div class="col-lg-6 text-right">
-                <div class="QQ">
-                    <span class="icon-qq-icon"> </span>
-                    <span class="icon-qq-num" 
-                        onclick="window.open('http://wpa.qq.com/msgrd?v=3&uin=2158999999&site=qq&menu=yes','_blank')">2158999999</span>
-                </div>
-                <div class="email">
-                    <span class="icon-mail"> </span>
-                    <p>Bwtgame88@gmail.com&nbsp;&nbsp;&nbsp;<span>opgame88@gmail.com</span></p>
-                </div>
-            </div>
-        </div>
-    </footer>
+
+    <footer></footer>
     <a href="# " class="toTop " href="# " title="top ">
         <span>
-            <p class="icon-keyboard_arrow_up">
+            <p class="arrow">
             </p>
         </span>
     </a>
@@ -173,6 +187,23 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.nicescroll.min.js"></script>
 <script src="js/wow.min.js"></script>
+<script src="slick/slick.js"></script>
+<script src="js/vue.js"></script>
+<script src="js/vue-carousel-3d.min.js"></script>
+<!--<script src="js/jquery.carousel.js"></script>-->
 <script src="js/script.js"></script>
+<script>
+
+new Vue({
+    el: '#carousel3d',
+    data: {
+        slides: 7
+    },
+    components: {
+        'carousel-3d': Carousel3d.Carousel3d,
+        'slide': Carousel3d.Slide
+    }
+})
+</script>
 
 </html>
