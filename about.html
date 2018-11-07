@@ -27,7 +27,7 @@
         <div class="navbar anvbar-custom navbar-default navbar-fixed-top" role="navigation"></div>
         <section id="about">
             <div class="inpagetitlebanner abouttitlebanner">
-                <div class="wow fadeInRight titlebannertxt">传奇软件 值得信赖</div>
+                <div class="wow fadeInUp titlebannertxt">传奇软件 值得信赖</div>
             </div>
             <section>
                 <div class="titlebox">
@@ -36,13 +36,13 @@
                     </h1>
                 </div>
                 <div class="rowbox">
-                    <div class="img aboutpic_01">
-                        <img src="images/about_01.jpg" alt="">
+                    <div class="img">
+                        <img class="wow bgfadein" src="images/about_01.jpg" alt="">
                     </div>
                     <article>
                         <div class="txtbox">
-                            <div class="title">上善若水 厚德载物</div>
-                            <div class="txt">
+                            <div class="title wow fadeInUp">上善若水 厚德载物</div>
+                            <div class="txt wow fadeInUp" data-wow-delay="0.2s" >
                                 传奇软件一直为博彩行业健康有序发展而不断努力，<br/>
                                 为我们的客户提供专业网站管理，<br/>
                                 便捷易操作的后台系统，以及全新的代理模式，<br/>
@@ -54,16 +54,17 @@
                                 我们将一如既往重视客户的反馈及需求，坚持不断创新，<br/>
                                 实现客户所想、玩家所需，朝多元化娱乐服务平台发展
                             </div>
-                            <div class="txtline"></div> 
+                            <div class="txtline wow fadeInUp" data-wow-delay="0.2s"></div>
                         </div>
                         
                     </article>
                 </div>
-                <div class="rowbox">
+                <div class="titlebox midtitlebox"></div>
+                <div class="rowbox rowbox-reverse">
                     <article>
                         <div class="txtbox lefttxtbox">
-                            <div class="title">专业的团队</div>
-                            <div class="txt">
+                            <div class="title wow fadeInUp">专业的团队</div>
+                            <div class="txt wow fadeInUp" data-wow-delay="0.1s">
                                 传奇软件一直致力于打造一支专业的团队，从而为我们的客户提供更多优质的服务，打造专属您的游戏平台
                                 <ul class="list">
                                     <li>公司现有一支专业的团队，从产品到开发再到测试，每一个环节都严格把关，只为打磨一款更具包容性的游戏服务平台；</li>
@@ -71,24 +72,26 @@
                                     <li>专业的运营团队，为您的网站运营保驾护航；</li>
                                 </ul>
                             </div>
-                            <div class="txtline"></div>
+                            <div class="txtline wow fadeInUp" data-wow-delay="0.2s"></div>
                         </div>
                         
                     </article>
                     <div class="img">
-                        <img src="images/about_02.jpg" alt="">
+                        <img class="wow bgfadein" src="images/about_02.jpg" alt="">
                     </div>
                 </div>
             </section>
             <section>
-                <div class="titlebox">
+                <div class="titlebox bigtitlebox">
                     <h1 class="title parttitle">企业愿景
                         <div class="stitle">Corporate Vision </div>
                     </h1>
                 </div>
-                <div class="rowbox">
+                <div class="inpagetitlebanner aboutendbanner">
                     <div class="title">
-                        引领博彩行业的健康稳定发展<br/>打造全球最大的一站式游戏服务平台
+                        <div class="wow fadeInUp">
+                            引领博彩行业的健康稳定发展<br/>打造全球最大的一站式游戏服务平台
+                        </div>
                     </div>
                 </div>
             </section>
@@ -109,73 +112,7 @@
 <script src="js/jquery.nicescroll.min.js"></script>
 <script src="js/wow.min.js"></script>
 <script src="js/jquery.colorbox.js"></script>
-<script src="js/vue.js "></script>
-<script src="js/data.js "></script>
 <script src="js/slick.js "></script>
 <script src="js/script.js"></script>
-<script>
-    var newsBanner;
-    var Newsmodal = false;
-
-    function ShowLightBox(light_box, boxModal) {
-        document.getElementById(light_box).style.display = 'block';
-        document.getElementById('fade').style.display = 'block';
-        newsBanner = light_box;
-        if (boxModal)
-            Newsmodal = true;
-        else Newsmodal = false;
-
-    }
-
-    function HideLightBox() {
-        if (document.getElementById(newsBanner)) {
-            document.getElementById(newsBanner).style.display = 'none';
-            document.getElementById('fade').style.display = 'none';
-            newsBanner = '';
-        }
-    }
-    /*$(function(){
-    	if(!getCookies("cancelAlert2")){
-    	 initoutalertbox_fn0();
-    	 addCookie("cancelAlert2","1",1);
-       }
-    })*/
-    
-    $(".searchbtn_mb,.prepage").click(function () {
-            $(".searchbox_mb").toggleClass("searchactive");
-        });
-    $(".alertinfbox").click(function () {
-        setTimeout('initoutalertbox_fn0()', 50) ;
-    	;
-    });
-    $(".alertinfbox1").click(function () {
-        setTimeout('initoutalertbox_fn1()', 50);
-    });
-    
-    function initoutalertbox_fn0(){
-        var alertboxw = $(window).width();
-        if (alertboxw > 1200) { alertboxw = 1200; }
-        var $form = $("#alertbox");
-        $.colorbox({
-            //iframe: true,
-            inline: true,
-            href: $form,
-            width: alertboxw, //燈箱中間區塊的寬度
-            fixed: true
-        });
-    }
-    function initoutalertbox_fn1() {
-        var alertboxw = $(window).width();
-        if (alertboxw > 1200) { alertboxw = 1200; }
-        var $form = $("#alertbox1");
-        $.colorbox({
-            //iframe: true,
-            inline: true,
-            href: $form,
-            width: alertboxw, //燈箱中間區塊的寬度
-            fixed: true
-        });
-    }
-</script>
 
 </html>

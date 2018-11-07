@@ -2180,10 +2180,10 @@ h1.parttitle{
                 left:0;
                 width: 100%;
                 height: 100%;
-                @include css3(animation,opacitylight 3s infinite ease-out);
+                @include css3(animation,opacitylight 3s infinite ease-in-out);
                 @include keyframes(opacitylight) {
                     0% {opacity: 0;}
-                    50% {opacity: .3;}
+                    50% {opacity: .4;}
                     100% {opacity: 0;}
                 }
             }
@@ -2287,11 +2287,24 @@ h1.parttitle{
             margin: 0 auto;
         }
     }
+    .midtitlebox{
+        padding-top: 60px;
+        @include range-width-in(0, 1280px) {
+            display: none;
+        }
+    }
     .titlebox{
         width: 20%;
         min-width: 420px;
         background: #F2F2F2;
         margin: 0 auto;
+        @include range-width-in(0, 768px) {
+            min-width: auto;
+            width: 100%;
+            .title{
+                margin-top: 0;
+            }
+        }
         .title{
             color: #D4B893;
             padding: 35px 0;
@@ -2310,6 +2323,7 @@ h1.parttitle{
         align-items: center;
         .img{
             width: calc(50% + 210px);
+            overflow: hidden;
             img{
                 width: 100%;
                 vertical-align: middle;
@@ -2319,7 +2333,7 @@ h1.parttitle{
             width: calc(50% - 210px);color: #333333;
             padding: 0 2%;
             .txtbox{
-                max-width: 400px;
+                width: 400px;
             }
             .lefttxtbox{
                 position: relative;
@@ -2333,14 +2347,108 @@ h1.parttitle{
                 padding-top: 30px;
                 padding-bottom: 45px;
                 font-size: 14px;
+                line-height: 20px;
+                .list{
+                    li{
+                        margin-top: 20px;
+                        &:before{
+                            content: "•";
+                            color: #D4B893;
+                            @include range-width-in(0, 768px) {
+                                content: "";
+                            }
+                        }
+                    }
+                }
             }
             .txtline{
                 width: 100px;
                 height: 6px;
                 background: #BFBFBF;
+                margin-bottom: 5%;
+            }
+        }
+        @include range-width-in(0, 1280px) {
+            text-align: center;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            article{width: 100%;
+                .txtbox{width: 100%;margin-top: 5%;}
+                .lefttxtbox{left: 0;}
+            }
+            .img{width: 100%;}
+            .txtline{
+                margin: 0 auto;
             }
         }
     }
+    .rowbox-reverse{
+        @include range-width-in(0, 1280px) {
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column-reverse;
+        }
+    }
+    .aboutendbanner{
+        background-image: url(../images/about_03.jpg);
+        min-height: 360px;
+        background-position: bottom center;
+        background-size: auto 500px;
+        @include boxalign();
+        padding-top: 0;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        .title{
+            width: 30%;
+            min-width: 420px;
+            height: 100%;
+            background: rgba(5,18,50,0.64);
+            min-height: 360px;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            color: #FFFFFF;
+            font-size: 25px;
+            text-align: center;
+            letter-spacing: 0;
+            line-height: 50px;
+            font-weight: 100;
+            @include range-width-in(0, 768px) {
+                min-width: 100%;
+                font-size: 20px;
+            }
+            >div{
+                width: 100%;
+            }
+        }
+        @include range-width-in(0, 768px) {
+            min-height: 150px;
+        }
+    }
+    .bigtitlebox{
+        width: 30%;
+        @include range-width-in(0, 768px) {
+            width: 100%;
+        }
+    }
+}
+.bgfadein{
+    @include css3(animation,bgfadein 2s linear);
+    @include keyframes(bgfadein) {
+    0% {
+        opacity: 0;
+        @include css3(transform, scale(1.1));
+    }
+    100% {
+        opacity: 1;
+        @include css3(transform, scale(1));
+    }
+}
 }
 /*scroll*/
 #ascrail2000{
