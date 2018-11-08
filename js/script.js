@@ -22,6 +22,13 @@ $(document).ready(function () {
                 }
             });
         }
+        $('.commonalert').fadeOut(0);
+        $('.popalert').click(function() {
+            $('.commonalert').fadeIn();
+        });
+        $('.alertclose').click(function() {
+            $('.commonalert').fadeOut();
+        });
     }
     $(window).scroll(function() {
         if ($(this).scrollTop() >= navHeight) {
@@ -60,9 +67,9 @@ $(document).ready(function() {
         }, 800);
         return false;
     });
-
 });
 $('.navbar').removeClass('wow');
+var wow = new WOW({live:true});
 new WOW().init();
 
 function addCookie(sName,sValue,day) {

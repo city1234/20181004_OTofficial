@@ -559,6 +559,74 @@ h1.parttitle{
 #alerthind {
     display: none;
 }
+.commonalert{
+    background: rgba(0,0,0,.8);
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    .closebg{
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+    }
+    .alert{
+        width: 100%;
+        max-width: 580px;
+        background: #434853;
+        padding: 70px 10px 10px 10px;
+        position: relative;
+        z-index: 5;
+        .alertin{
+            background: #2f333c;
+            @include css3(border-radius,0 0 30px 30px);
+            color:#fff;
+            overflow: hidden;
+            .alerttoptitle{
+                position: absolute;
+                background: url(../images/alerttitle.jpg) no-repeat top center;
+                width: 100%;
+                height: 70px;
+                top: 0;
+                left: 0;
+                text-align: center;
+                line-height: 70px;
+                font-size: 30px;
+            }
+            .alertcontent{
+                min-height: 150px;
+                text-align: center;
+                vertical-align: middle;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-align-items: center;
+                -ms-flex-align: center;
+                align-items: center;
+                padding: 10px;
+                .txt{
+                    font-size: 16px;
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+            .fullbtn{margin: 0 auto 20px auto;}
+        }
+
+    }
+}
 #alertbox{padding-top: 60px;}
 #alertbox1{padding-top: 80px;}
 #alertbox,#alertbox1{
@@ -1074,7 +1142,7 @@ h1.parttitle{
     #information {
         .container {
             .newsBigBanner {
-                padding: 0 30px;
+                padding: 0 15px;
             }
         }
     }
@@ -1084,6 +1152,7 @@ h1.parttitle{
 #information {
     height: auto;
     min-height: calc(100vh - 80px);
+    padding-bottom: 15px;
     .informationtitlebanner{
         background-image: url(../images/information_titlebk.jpg);
         @include boxalign();
@@ -1136,13 +1205,18 @@ h1.parttitle{
     }
     .newsBigBanner,.newsBanner{
         margin: 0 0;
-        .slick-dots{
-            bottom: -25px;}
-        .slick-slide{
-            margin: 20px 0;}
+        .rowbox{
+            -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+        }
     }
     .innewsBanner{
         margin-top: 20px;
+        width: 32%;
+        @include breakpoint(pad){
+            width: 100%;
+        }
         .bannerboxstyle_one{
             width: 100%;}
         .bannerboxstyle_two{
@@ -1184,10 +1258,10 @@ h1.parttitle{
             padding: 12px;
             font-size: 1.2em;
             text-align: left;}}
-    .col-sm-4{
+    .rowbox-4{
         .bannerItem_imgout{
             max-height: 160px;}}
-    .col-sm-4,.col-lg-12{
+    .rowbox-4,.rowbox-12{
         @include breakpoint(mobile){
             margin-top: 20px;
             padding-left: 0;
@@ -1221,6 +1295,7 @@ h1.parttitle{
                 text-overflow: ellipsis;
                 white-space: nowrap;
                 text-align: left;
+                height: 22px;
             }
             a{
                 &:hover{
@@ -1354,7 +1429,6 @@ h1.parttitle{
     }
     .innewsBanner {
         .innewsBannerbox {
-            margin-bottom: 20px;
             min-height: 240px;
             @include range-width-in(0, 768px) {
                 min-height: auto;
@@ -2438,7 +2512,7 @@ h1.parttitle{
     }
 }
 .bgfadein{
-    @include css3(animation,bgfadein 2s linear);
+    @include css3(animation,bgfadein 2.5s linear);
     @include keyframes(bgfadein) {
     0% {
         opacity: 0;

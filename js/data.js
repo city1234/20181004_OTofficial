@@ -66,6 +66,126 @@ var vm = new Vue({
                 importanttag: false, //产品专栏活动专栏头版,内容发布重点标签
                 istopbanner: true, //是否首页展示
                 clickto: false, //是否有内页跳窗公告
+                link: "action/20180917_app/index.html", //点击连结,下载檔案
+                downloadbtn: false, //是否有下载按钮
+                downloadlink: "", //下载连结
+                mainbannerimg: "images/activebanner/20180917_app.jpg", //首页大图2500*1080
+                bannerimg: "images/activebanner/20180917_apps.jpg", //公告内页小图1410*385
+                name: "精彩隨時隨地,一切盡在掌握!!", //公告名称(最好8个全形字以内),download活动素材/轮播图
+                time: "2018/09", //活动日期
+                containtexts: '',
+                containtext: '' //内容html
+            },
+            {
+                newstype: 0, //资讯子分页类型 product>0,content>1,event>2,download>3
+                importanttag: false, //产品专栏活动专栏头版,内容发布重点标签
+                istopbanner: true, //是否首页展示
+                clickto: false, //是否有内页跳窗公告
+                link: "action/20180917_app/index.html", //点击连结,下载檔案
+                downloadbtn: false, //是否有下载按钮
+                downloadlink: "", //下载连结
+                mainbannerimg: "images/activebanner/20180917_app.jpg", //首页大图2500*1080
+                bannerimg: "images/activebanner/20180917_apps.jpg", //公告内页小图1410*385
+                name: "精彩隨時隨地,一切盡在掌握!!", //公告名称(最好8个全形字以内),download活动素材/轮播图
+                time: "2018/09", //活动日期
+                containtexts: '',
+                containtext: '' //内容html
+            },
+            {
+                newstype: 0, //资讯子分页类型 product>0,content>1,event>2,download>3
+                importanttag: false, //产品专栏活动专栏头版,内容发布重点标签
+                istopbanner: true, //是否首页展示
+                clickto: false, //是否有内页跳窗公告
+                link: "action/20180917_app/index.html", //点击连结,下载檔案
+                downloadbtn: false, //是否有下载按钮
+                downloadlink: "", //下载连结
+                mainbannerimg: "images/activebanner/20180917_app.jpg", //首页大图2500*1080
+                bannerimg: "images/activebanner/20180917_apps.jpg", //公告内页小图1410*385
+                name: "精彩隨時隨地,一切盡在掌握!!", //公告名称(最好8个全形字以内),download活动素材/轮播图
+                time: "2018/09", //活动日期
+                containtexts: '',
+                containtext: '' //内容html
+            },
+            {
+                newstype: 0, //资讯子分页类型 product>0,content>1,event>2,download>3
+                importanttag: false, //产品专栏活动专栏头版,内容发布重点标签
+                istopbanner: true, //是否首页展示
+                clickto: false, //是否有内页跳窗公告
+                link: "action/20180917_app/index.html", //点击连结,下载檔案
+                downloadbtn: false, //是否有下载按钮
+                downloadlink: "", //下载连结
+                mainbannerimg: "images/activebanner/20180917_app.jpg", //首页大图2500*1080
+                bannerimg: "images/activebanner/20180917_apps.jpg", //公告内页小图1410*385
+                name: "精彩隨時隨地,一切盡在掌握!!", //公告名称(最好8个全形字以内),download活动素材/轮播图
+                time: "2018/09", //活动日期
+                containtexts: '',
+                containtext: '' //内容html
+            },
+            {
+                newstype: 0, //资讯子分页类型 product>0,content>1,event>2,download>3
+                importanttag: false, //产品专栏活动专栏头版,内容发布重点标签
+                istopbanner: true, //是否首页展示
+                clickto: false, //是否有内页跳窗公告
+                link: "action/20180917_app/index.html", //点击连结,下载檔案
+                downloadbtn: false, //是否有下载按钮
+                downloadlink: "", //下载连结
+                mainbannerimg: "images/activebanner/20180917_app.jpg", //首页大图2500*1080
+                bannerimg: "images/activebanner/20180917_apps.jpg", //公告内页小图1410*385
+                name: "精彩隨時隨地,一切盡在掌握!!", //公告名称(最好8个全形字以内),download活动素材/轮播图
+                time: "2018/09", //活动日期
+                containtexts: '',
+                containtext: '' //内容html
+            },
+            {
+                newstype: 0, //资讯子分页类型 product>0,content>1,event>2,download>3
+                importanttag: false, //产品专栏活动专栏头版,内容发布重点标签
+                istopbanner: true, //是否首页展示
+                clickto: false, //是否有内页跳窗公告
+                link: "action/20180917_app/index.html", //点击连结,下载檔案
+                downloadbtn: false, //是否有下载按钮
+                downloadlink: "", //下载连结
+                mainbannerimg: "images/activebanner/20180917_app.jpg", //首页大图2500*1080
+                bannerimg: "images/activebanner/20180917_apps.jpg", //公告内页小图1410*385
+                name: "精彩隨時隨地,一切盡在掌握!!", //公告名称(最好8个全形字以内),download活动素材/轮播图
+                time: "2018/09", //活动日期
+                containtexts: '',
+                containtext: '' //内容html
+            },
+            {
+                newstype: 0, //资讯子分页类型 product>0,content>1,event>2,download>3
+                importanttag: false, //产品专栏活动专栏头版,内容发布重点标签
+                istopbanner: true, //是否首页展示
+                clickto: false, //是否有内页跳窗公告
+                link: "action/20180917_app/index.html", //点击连结,下载檔案
+                downloadbtn: false, //是否有下载按钮
+                downloadlink: "", //下载连结
+                mainbannerimg: "images/activebanner/20180917_app.jpg", //首页大图2500*1080
+                bannerimg: "images/activebanner/20180917_apps.jpg", //公告内页小图1410*385
+                name: "精彩隨時隨地,一切盡在掌握!!", //公告名称(最好8个全形字以内),download活动素材/轮播图
+                time: "2018/09", //活动日期
+                containtexts: '',
+                containtext: '' //内容html
+            },
+            {
+                newstype: 0, //资讯子分页类型 product>0,content>1,event>2,download>3
+                importanttag: false, //产品专栏活动专栏头版,内容发布重点标签
+                istopbanner: true, //是否首页展示
+                clickto: false, //是否有内页跳窗公告
+                link: "action/20180917_app/index.html", //点击连结,下载檔案
+                downloadbtn: false, //是否有下载按钮
+                downloadlink: "", //下载连结
+                mainbannerimg: "images/activebanner/20180917_app.jpg", //首页大图2500*1080
+                bannerimg: "images/activebanner/20180917_apps.jpg", //公告内页小图1410*385
+                name: "精彩隨時隨地,一切盡在掌握!!", //公告名称(最好8个全形字以内),download活动素材/轮播图
+                time: "2018/09", //活动日期
+                containtexts: '',
+                containtext: '' //内容html
+            },
+            {
+                newstype: 0, //资讯子分页类型 product>0,content>1,event>2,download>3
+                importanttag: false, //产品专栏活动专栏头版,内容发布重点标签
+                istopbanner: true, //是否首页展示
+                clickto: false, //是否有内页跳窗公告
                 link: "https://elegant-wescoff-78d55a.netlify.com/", //点击连结,下载檔案
                 downloadbtn: true, //是否有下载按钮
                 downloadlink: "loading/jdb.zip", //下载连结
@@ -603,7 +723,7 @@ var vm = new Vue({
                 downloadbtn: false,
                 downloadlink: "",
                 mainbannerimg: "",
-                bannerimg: "http://luckydraw.oriental-game.com/LUCKYDRAW/assets/images/xinyun-logo.png",
+                bannerimg: "",
                 name: "东方游戏幸运抽抽乐",
                 time: "2018/05",
                 containtexts: '',
@@ -618,7 +738,7 @@ var vm = new Vue({
                 downloadbtn: false,
                 downloadlink: "",
                 mainbannerimg: "",
-                bannerimg: "https://www.lc88drt.com/tournaments/site/Content/Images/fg/lucky_dragoon_logo.png",
+                bannerimg: "",
                 name: "幸运之龙擂台赛",
                 time: "2018/05",
                 containtexts: '',
@@ -633,7 +753,7 @@ var vm = new Vue({
                 downloadbtn: false,
                 downloadlink: "",
                 mainbannerimg: "",
-                bannerimg: "http://www.fishhuntergames.com/events/apr2018/img/bg.jpg",
+                bannerimg: "",
                 name: "宝箱宝宝大迁徙",
                 time: "2018/04/23",
                 containtexts: '',
@@ -648,7 +768,7 @@ var vm = new Vue({
                 downloadbtn: false,
                 downloadlink: "",
                 mainbannerimg: "",
-                bannerimg: "http://xingaming.com/img/event-coinBattle/banner_1920x870_ZH.jpg",
+                bannerimg: "",
                 name: "百万英雄金币王   通关翻倍天天赏",
                 time: "2018/04/18",
                 containtexts: '',
@@ -663,7 +783,7 @@ var vm = new Vue({
                 downloadbtn: false,
                 downloadlink: "",
                 mainbannerimg: "",
-                bannerimg: "http://www.xingaming.com/img/event-coinBattle/banner_1920x870_ZH.jpg",
+                bannerimg: "",
                 name: "XIN哥來了",
                 time: "2018/03/26",
                 containtexts: '',
@@ -678,7 +798,7 @@ var vm = new Vue({
                 downloadbtn: false,
                 downloadlink: "",
                 mainbannerimg: "",
-                bannerimg: "http://www.fishhuntergames.com/events/march2018/img/bg.jpg",
+                bannerimg: "",
                 name: "礼金大派送",
                 time: "2018/03/20",
                 containtexts: '',
@@ -733,8 +853,16 @@ var vm = new Vue({
             this.search = "";
             $(".newsnavlist>div>li").eq(index).addClass("active").siblings().removeClass("active");
             $("#information .newsnavlist>div>li").eq(index).addClass("active").siblings().removeClass("active");
+            $(".nowlistpage").eq(index).fadeIn(300).siblings(".nowlistpage").fadeOut(0);
             $("html").getNiceScroll().resize();
             $("html").getNiceScroll().remove();
+            var nowoffset=$(window).scrollTop();
+            $("html,body").animate({
+                scrollTop: nowoffset-1
+            }, 1);
+            $("html,body").animate({
+                scrollTop: $("#totopnews").offset().top
+            }, 500);
             var agent = navigator.userAgent.toLowerCase();
             if (agent.match("android") || agent.match("iphone") || agent.match("ipad")) {} else {
                 nice = $("html").niceScroll({ scrollspeed: 51, mousescrollstep: 45, cursorwidth: "5px", cursorcolor: "#222", cursorborder: "0px solid #fff" });
