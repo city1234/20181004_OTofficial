@@ -10,7 +10,9 @@ $(function() {
 $(document).ready(function () {
     var navbar = $('.navbar');
     var navHeight = navbar.height();
-    var pagenum = location.pathname.replace(/\//g, "");
+    var pagenumarr = location.pathname.split("?")[0].split("/");
+    var pagenum = pagenumarr[pagenumarr.length-1];
+    //console.log(pagenum);
     function pagelink_fn() {
         if (pagenum==""){
             $("ul.navbar-nav li").eq(0).addClass("activecolor");
